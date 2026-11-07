@@ -13,7 +13,7 @@ run_worker_first = ["/api/*"]
 binding = "DB"
 database_name = "autodeck-maps"
 # Paste the id printed by `npx wrangler d1 create autodeck-maps` here before deploying.
-database_id = "00000000-0000-0000-0000-000000000000"
+database_id = "cf7a6c3b-15ff-49da-a1e9-f04e51064924"
 migrations_dir = "migrations"
 
 # Daily cleanup of expired sessions, old shared drives and login throttling records.
