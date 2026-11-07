@@ -37,7 +37,7 @@ const WORSE = ['rain', 'heavy-rain', 'storm'];
 const wet = (f) => Boolean(f && WORSE.includes(f.sky) && (f.chance ?? 1) >= 0.3);
 const severity = (f) => (wet(f) ? WORSE.indexOf(f.sky) + 1 : 0);
 const temps = (f) => (f.temp != null ? `${Math.round(f.temp)}°C` : f.low != null && f.high != null ? `${f.low}–${f.high}°C` : '');
-// Forecasts are often wrong about exactly where and when it rains, so A2B only ever says what's possible.
+// Forecasts are often wrong about exactly where and when it rains, so AutoDeck Maps only ever says what's possible.
 const WET_WORDS = { rain: 'Rain', 'heavy-rain': 'Heavy rain', storm: 'Storms' };
 const DRY_WORDS = { clear: 'Likely dry', cloudy: 'Likely dry and cloudy', haze: 'Possibly hazy', windy: 'Possibly windy' };
 const NOW_MS = 20 * 60_000; // a point this close in time is "now"

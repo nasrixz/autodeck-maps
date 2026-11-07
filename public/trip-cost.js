@@ -6,7 +6,7 @@
 // toll-free route's real cost is easy to compare. An estimate, and said to be one.
 
 // The fuel a car takes, as this phone's settings call it, and the price list's name for it. The BUDI ones are the
-// subsidised prices, for drivers who get the subsidy: who does is up to them, not something A2B can tell.
+// subsidised prices, for drivers who get the subsidy: who does is up to them, not something AutoDeck Maps can tell.
 export const FUELS = [
   ['ron95_budi95', 'RON95 BUDI95'],
   ['ron95', 'RON95'],

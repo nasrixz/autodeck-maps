@@ -82,7 +82,7 @@ export const CAR = `<svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="21" fill
 
 export const DEST_PIN = `<svg viewBox="0 0 36 46"><path d="M18 44s15-15.4 15-26A15 15 0 0 0 3 18c0 10.6 15 26 15 26Z" fill="#e5484d" stroke="#fff" stroke-width="2.5"/><circle cx="18" cy="18" r="5.5" fill="#fff"/></svg>`;
 
-export const DROP_PIN = `<svg viewBox="0 0 36 46"><path d="M18 44s15-15.4 15-26A15 15 0 0 0 3 18c0 10.6 15 26 15 26Z" fill="#a8306d" stroke="#fff" stroke-width="2.5"/><circle cx="18" cy="18" r="5.5" fill="#fff"/></svg>`;
+export const DROP_PIN = `<svg viewBox="0 0 36 46"><path d="M18 44s15-15.4 15-26A15 15 0 0 0 3 18c0 10.6 15 26 15 26Z" fill="#0b9e8a" stroke="#fff" stroke-width="2.5"/><circle cx="18" cy="18" r="5.5" fill="#fff"/></svg>`;
 
 // The search screen's category buttons: a white icon on the kind's colour (the same colours as its pins on the map).
 const catSvg = (body) => `<svg viewBox="0 0 24 24" aria-hidden="true">${body}</svg>`;

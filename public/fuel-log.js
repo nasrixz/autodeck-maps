@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 // Copyright (C) 2026 Thaqif Syarafuddin bin Roslan. A2B: https://github.com/thaqif0709/a2b (see NOTICE).
 
-// What the driving done with A2B has cost in fuel, roughly: the distance actually driven (from the GPS, on real
+// What the driving done with AutoDeck Maps has cost in fuel, roughly: the distance actually driven (from the GPS, on real
 // drives by car: not walks, trains, motorbikes or demo drives), priced at that week's pump price as it's driven
 // (trip-cost.js). Kept on this phone, a total per day, so Settings can say this week, this month and all time.
 

@@ -12,7 +12,7 @@ export default {
   'Point map north': '地图朝北',
   'Show my location': '显示我的位置',
   'Report': '报告',
-  'My A2B': '我的 A2B',
+  'My AutoDeck Maps': '我的 AutoDeck Maps',
   'Search': '搜索',
   'Find the nearest': '查找最近的',
   'Petrol': '加油站',
@@ -40,8 +40,8 @@ export default {
   'Suggest a place': '建议地点',
   'Arrived': '已到达',
   'Report details': '报告详情',
-  'Welcome to A2B': '欢迎使用 A2B',
-  'A2B is full': 'A2B 已满',
+  'Welcome to AutoDeck Maps': '欢迎使用 AutoDeck Maps',
+  'AutoDeck Maps is full': 'AutoDeck Maps 已满',
   'Account': '账户',
   'Shared drive': '共享的行程',
   'Add a comment (optional)': '添加备注（可选）',
@@ -52,7 +52,7 @@ export default {
   'km/h': 'km/h', // as Chinese-language speedometers show it
   'Where to?': '去哪里？',
   'Search for an address': '搜索地址',
-  'Turn on location so A2B can show where you are.': '开启定位，A2B 才能显示你的位置。',
+  'Turn on location so AutoDeck Maps can show where you are.': '开启定位，AutoDeck Maps 才能显示你的位置。',
   'Try again': '重试',
   'Home': '家',
   'Set location': '设置位置',
@@ -114,7 +114,7 @@ export default {
   // ---------- index.html: menu, welcome, waiting screen, account ----------
   'Top drivers': '司机排行榜',
   'Add to home screen': '添加到主屏幕',
-  'Update A2B': '更新 A2B',
+  'Update AutoDeck Maps': '更新 AutoDeck Maps',
   'Refresh': '刷新',
   'About': '关于',
   'Log out': '退出登录',
@@ -122,12 +122,12 @@ export default {
     '为马来西亚打造的免费导航，由一个人借助 AI 编程助手开发，仍在不断改进。',
   'Search places, pick a route, and get turn-by-turn voice': '搜索地点、选择路线，并获得逐向语音导航',
   'It\'s a beta: 50 drivers at a time, and no CarPlay or Android Auto yet': '这是测试版：同时最多 50 位司机，暂不支持 CarPlay 或 Android Auto',
-  'Next, your phone asks to share your location so A2B can show where you are': '接下来，手机会请求分享你的位置，让 A2B 显示你在哪里',
+  'Next, your phone asks to share your location so AutoDeck Maps can show where you are': '接下来，手机会请求分享你的位置，让 AutoDeck Maps 显示你在哪里',
   'Let\'s go': '开始吧',
-  'A2B is full right now': 'A2B 目前已满',
+  'AutoDeck Maps is full right now': 'AutoDeck Maps 目前已满',
   'drivers are using it': '位司机正在使用',
-  'A2B is a beta running on free map servers, so only so many people can use it at once.':
-    'A2B 是运行在免费地图服务器上的测试版，所以同时使用的人数有限。',
+  'AutoDeck Maps is a beta running on free map servers, so only so many people can use it at once.':
+    'AutoDeck Maps 是运行在免费地图服务器上的测试版，所以同时使用的人数有限。',
   'Sign up free': '免费注册',
   'Sign up': '注册',
   'Join other drivers. Report what you see on the road and get thanked for it.': '加入其他司机，报告路上所见，并获得感谢。',
@@ -141,10 +141,10 @@ export default {
 
   // ---------- welcome.js ----------
   // Safari's and Chrome's own button names stay in English, as most phones here show them.
-  '<b>Use it like an app:</b> in Safari, tap Share <span class="w-ic">{icon}</span>, then <b>Add to Home Screen</b>, keep <b>Open as Web App</b> on, and open A2B from its new icon.':
-    '<b>像应用一样使用：</b>在 Safari 中点按 Share <span class="w-ic">{icon}</span>，然后选 <b>Add to Home Screen</b>，保持 <b>Open as Web App</b> 开启，再从新图标打开 A2B。',
-  '<b>Use it like an app:</b> in Chrome, tap ⋮, then <b>Add to home screen</b> (or <b>Install app</b>), and open A2B from its new icon.':
-    '<b>像应用一样使用：</b>在 Chrome 中点按 ⋮，然后选 <b>Add to home screen</b>（或 <b>Install app</b>），再从新图标打开 A2B。',
+  '<b>Use it like an app:</b> in Safari, tap Share <span class="w-ic">{icon}</span>, then <b>Add to Home Screen</b>, keep <b>Open as Web App</b> on, and open AutoDeck Maps from its new icon.':
+    '<b>像应用一样使用：</b>在 Safari 中点按 Share <span class="w-ic">{icon}</span>，然后选 <b>Add to Home Screen</b>，保持 <b>Open as Web App</b> 开启，再从新图标打开 AutoDeck Maps。',
+  '<b>Use it like an app:</b> in Chrome, tap ⋮, then <b>Add to home screen</b> (or <b>Install app</b>), and open AutoDeck Maps from its new icon.':
+    '<b>像应用一样使用：</b>在 Chrome 中点按 ⋮，然后选 <b>Add to home screen</b>（或 <b>Install app</b>），再从新图标打开 AutoDeck Maps。',
 
   // ---------- presence.js: the waiting screen ----------
   '{active} of {max}': '{active}/{max}',
@@ -154,19 +154,19 @@ export default {
     '你已登录，所以任何空出的位子你都可以使用，包括为账户保留的位子。',
   'Some spots are kept for drivers with an account, so signing up (free) gets you in sooner.':
     '部分位子为有账户的司机保留，所以（免费）注册可以更快进入。',
-  '{active} of {max} drivers on A2B now': 'A2B 现有 {active}/{max} 位司机',
+  '{active} of {max} drivers on AutoDeck Maps now': 'AutoDeck Maps 现有 {active}/{max} 位司机',
 
   // ---------- panels.js: Settings › Fuel ----------
   'Fuel spent': '油费支出',
-  "An estimate: how far you drove by car with A2B, at your car's fuel use and that week's pump price. Electric cars count as nothing. Kept on this phone only.": '估算：你用 A2B 开车行驶的距离，按你车子的油耗和当周油价计算。电动车不计油费。只保存在这部手机上。',
+  "An estimate: how far you drove by car with AutoDeck Maps, at your car's fuel use and that week's pump price. Electric cars count as nothing. Kept on this phone only.": '估算：你用 AutoDeck Maps 开车行驶的距离，按你车子的油耗和当周油价计算。电动车不计油费。只保存在这部手机上。',
   'This week': '本周',
   'This month': '本月',
   'All time': '全部',
 
   // ---------- core.js and geo.js ----------
-  "Can't reach A2B. Check your connection and try again.": '无法连接 A2B。请检查网络后重试。',
-  'A2B is busy right now (it runs on free servers during the beta). Try again in a minute.':
-    'A2B 目前繁忙（测试期间使用免费服务器）。请一分钟后再试。',
+  "Can't reach AutoDeck Maps. Check your connection and try again.": '无法连接 AutoDeck Maps。请检查网络后重试。',
+  'AutoDeck Maps is busy right now (it runs on free servers during the beta). Try again in a minute.':
+    'AutoDeck Maps 目前繁忙（测试期间使用免费服务器）。请一分钟后再试。',
   'Something went wrong ({status}).': '出了点问题（{status}）。',
   'just now': '刚刚',
   '{n} min ago': '{n} 分钟前',
@@ -176,10 +176,10 @@ export default {
   '{h} h': '{h} 小时',
 
   // ---------- Messages from the server (src/), shown as they come ----------
-  'A2B is full right now. You will be let in when a spot opens.': 'A2B 目前已满。有空位时你就能进入。',
+  'AutoDeck Maps is full right now. You will be let in when a spot opens.': 'AutoDeck Maps 目前已满。有空位时你就能进入。',
   'Something went wrong on our side. Please try again in a minute.': '我们这边出了问题。请一分钟后再试。',
-  'A2B is busy right now (it runs on free map servers during the beta). Try again in a minute.':
-    'A2B 目前繁忙（测试期间使用免费地图服务器）。请一分钟后再试。',
+  'AutoDeck Maps is busy right now (it runs on free map servers during the beta). Try again in a minute.':
+    'AutoDeck Maps 目前繁忙（测试期间使用免费地图服务器）。请一分钟后再试。',
   'Search service error ({n}).': '搜索服务出错（{n}）。',
   'No route found between these places.': '这两个地点之间找不到路线。',
   'Sign in first.': '请先登录。',

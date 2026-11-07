@@ -12,7 +12,7 @@ export default {
   'Point map north': 'வரைபடத்தை வடக்கு நோக்கி திருப்பு',
   'Show my location': 'என் இருப்பிடத்தைக் காட்டு',
   'Report': 'தெரிவி',
-  'My A2B': 'என் A2B',
+  'My AutoDeck Maps': 'என் AutoDeck Maps',
   'Search': 'தேடு',
   'Find the nearest': 'அருகிலுள்ளதைத் தேடு',
   'Petrol': 'பெட்ரோல்',
@@ -40,8 +40,8 @@ export default {
   'Suggest a place': 'இடத்தைப் பரிந்துரை',
   'Arrived': 'வந்தடைந்தது',
   'Report details': 'தகவல் விவரங்கள்',
-  'Welcome to A2B': 'A2B-க்கு வரவேற்கிறோம்',
-  'A2B is full': 'A2B நிரம்பியுள்ளது',
+  'Welcome to AutoDeck Maps': 'AutoDeck Maps-க்கு வரவேற்கிறோம்',
+  'AutoDeck Maps is full': 'AutoDeck Maps நிரம்பியுள்ளது',
   'Account': 'கணக்கு',
   'Shared drive': 'பகிரப்பட்ட பயணம்',
   'Add a comment (optional)': 'கருத்து சேர்க்கவும் (விருப்பம்)',
@@ -52,7 +52,7 @@ export default {
   'km/h': 'km/h', // as speedometers show it
   'Where to?': 'எங்கே செல்ல வேண்டும்?',
   'Search for an address': 'முகவரியைத் தேடு',
-  'Turn on location so A2B can show where you are.': 'நீங்கள் எங்கே இருக்கிறீர்கள் என A2B காட்ட, இருப்பிடத்தை இயக்குங்கள்.',
+  'Turn on location so AutoDeck Maps can show where you are.': 'நீங்கள் எங்கே இருக்கிறீர்கள் என AutoDeck Maps காட்ட, இருப்பிடத்தை இயக்குங்கள்.',
   'Try again': 'மீண்டும் முயலுங்கள்',
   'Home': 'வீடு',
   'Set location': 'இடத்தை அமை',
@@ -114,7 +114,7 @@ export default {
   // ---------- index.html: menu, welcome, waiting screen, account ----------
   'Top drivers': 'சிறந்த ஓட்டுநர்கள்',
   'Add to home screen': 'முகப்புத் திரையில் சேர்',
-  'Update A2B': 'A2B-ஐப் புதுப்பி',
+  'Update AutoDeck Maps': 'AutoDeck Maps-ஐப் புதுப்பி',
   'Refresh': 'புதுப்பி',
   'About': 'பற்றி',
   'Log out': 'வெளியேறு',
@@ -122,13 +122,13 @@ export default {
     'மலேசியாவுக்கான இலவச வழிகாட்டி. ஒருவர் AI நிரலாக்க உதவியாளருடன் உருவாக்கியது, இன்னும் மேம்படுத்தப்பட்டு வருகிறது.',
   'Search places, pick a route, and get turn-by-turn voice': 'இடங்களைத் தேடுங்கள், பாதையைத் தேர்ந்தெடுங்கள், ஒவ்வொரு திருப்பத்துக்கும் குரல் வழிகாட்டல் பெறுங்கள்',
   'It\'s a beta: 50 drivers at a time, and no CarPlay or Android Auto yet': 'இது பீட்டா பதிப்பு: ஒரே நேரத்தில் 50 ஓட்டுநர்கள், CarPlay அல்லது Android Auto இன்னும் இல்லை',
-  'Next, your phone asks to share your location so A2B can show where you are':
-    'அடுத்து, நீங்கள் எங்கே இருக்கிறீர்கள் என A2B காட்ட, உங்கள் இருப்பிடத்தைப் பகிர உங்கள் தொலைபேசி கேட்கும்',
+  'Next, your phone asks to share your location so AutoDeck Maps can show where you are':
+    'அடுத்து, நீங்கள் எங்கே இருக்கிறீர்கள் என AutoDeck Maps காட்ட, உங்கள் இருப்பிடத்தைப் பகிர உங்கள் தொலைபேசி கேட்கும்',
   'Let\'s go': 'தொடங்குவோம்',
-  'A2B is full right now': 'A2B இப்போது நிரம்பியுள்ளது',
+  'AutoDeck Maps is full right now': 'AutoDeck Maps இப்போது நிரம்பியுள்ளது',
   'drivers are using it': 'ஓட்டுநர்கள் பயன்படுத்துகின்றனர்',
-  'A2B is a beta running on free map servers, so only so many people can use it at once.':
-    'A2B இலவச வரைபட சேவையகங்களில் இயங்கும் பீட்டா பதிப்பு, எனவே ஒரே நேரத்தில் குறிப்பிட்ட எண்ணிக்கையினர் மட்டுமே பயன்படுத்த முடியும்.',
+  'AutoDeck Maps is a beta running on free map servers, so only so many people can use it at once.':
+    'AutoDeck Maps இலவச வரைபட சேவையகங்களில் இயங்கும் பீட்டா பதிப்பு, எனவே ஒரே நேரத்தில் குறிப்பிட்ட எண்ணிக்கையினர் மட்டுமே பயன்படுத்த முடியும்.',
   'Sign up free': 'இலவசமாகப் பதிவு செய்',
   'Sign up': 'பதிவு செய்',
   'Join other drivers. Report what you see on the road and get thanked for it.':
@@ -143,10 +143,10 @@ export default {
 
   // ---------- welcome.js ----------
   // Safari's and Chrome's own button names stay in English, as most phones here show them.
-  '<b>Use it like an app:</b> in Safari, tap Share <span class="w-ic">{icon}</span>, then <b>Add to Home Screen</b>, keep <b>Open as Web App</b> on, and open A2B from its new icon.':
-    '<b>ஆப் போலப் பயன்படுத்த:</b> Safari-இல் Share <span class="w-ic">{icon}</span> தட்டி, <b>Add to Home Screen</b> தேர்ந்தெடுத்து, <b>Open as Web App</b> இயக்கத்தில் வைத்து, புதிய ஐகானிலிருந்து A2B-ஐத் திறங்கள்.',
-  '<b>Use it like an app:</b> in Chrome, tap ⋮, then <b>Add to home screen</b> (or <b>Install app</b>), and open A2B from its new icon.':
-    '<b>ஆப் போலப் பயன்படுத்த:</b> Chrome-இல் ⋮ தட்டி, <b>Add to home screen</b> (அல்லது <b>Install app</b>) தேர்ந்தெடுத்து, புதிய ஐகானிலிருந்து A2B-ஐத் திறங்கள்.',
+  '<b>Use it like an app:</b> in Safari, tap Share <span class="w-ic">{icon}</span>, then <b>Add to Home Screen</b>, keep <b>Open as Web App</b> on, and open AutoDeck Maps from its new icon.':
+    '<b>ஆப் போலப் பயன்படுத்த:</b> Safari-இல் Share <span class="w-ic">{icon}</span> தட்டி, <b>Add to Home Screen</b> தேர்ந்தெடுத்து, <b>Open as Web App</b> இயக்கத்தில் வைத்து, புதிய ஐகானிலிருந்து AutoDeck Maps-ஐத் திறங்கள்.',
+  '<b>Use it like an app:</b> in Chrome, tap ⋮, then <b>Add to home screen</b> (or <b>Install app</b>), and open AutoDeck Maps from its new icon.':
+    '<b>ஆப் போலப் பயன்படுத்த:</b> Chrome-இல் ⋮ தட்டி, <b>Add to home screen</b> (அல்லது <b>Install app</b>) தேர்ந்தெடுத்து, புதிய ஐகானிலிருந்து AutoDeck Maps-ஐத் திறங்கள்.',
 
   // ---------- presence.js: the waiting screen ----------
   '{active} of {max}': '{max}-இல் {active}',
@@ -156,19 +156,19 @@ export default {
     'நீங்கள் உள்நுழைந்துள்ளீர்கள், எனவே கணக்குகளுக்காக ஒதுக்கப்பட்டவை உட்பட காலியாகும் எந்த இடத்தையும் பெறலாம்.',
   'Some spots are kept for drivers with an account, so signing up (free) gets you in sooner.':
     'சில இடங்கள் கணக்கு உள்ள ஓட்டுநர்களுக்கு ஒதுக்கப்பட்டுள்ளன, எனவே (இலவசமாக) பதிவு செய்தால் விரைவில் உள்ளே செல்லலாம்.',
-  '{active} of {max} drivers on A2B now': 'இப்போது A2B-இல் {max}-இல் {active} ஓட்டுநர்கள்',
+  '{active} of {max} drivers on AutoDeck Maps now': 'இப்போது AutoDeck Maps-இல் {max}-இல் {active} ஓட்டுநர்கள்',
 
   // ---------- panels.js: Settings › Fuel ----------
   'Fuel spent': 'எரிபொருள் செலவு',
-  "An estimate: how far you drove by car with A2B, at your car's fuel use and that week's pump price. Electric cars count as nothing. Kept on this phone only.": 'ஒரு மதிப்பீடு: A2B உடன் நீங்கள் காரில் ஓட்டிய தூரம், உங்கள் காரின் எரிபொருள் பயன்பாடு மற்றும் அந்த வாரத்தின் பம்ப் விலையில். மின்சார கார்களுக்குச் செலவு இல்லை. இந்தத் தொலைபேசியில் மட்டுமே வைக்கப்படும்.',
+  "An estimate: how far you drove by car with AutoDeck Maps, at your car's fuel use and that week's pump price. Electric cars count as nothing. Kept on this phone only.": 'ஒரு மதிப்பீடு: AutoDeck Maps உடன் நீங்கள் காரில் ஓட்டிய தூரம், உங்கள் காரின் எரிபொருள் பயன்பாடு மற்றும் அந்த வாரத்தின் பம்ப் விலையில். மின்சார கார்களுக்குச் செலவு இல்லை. இந்தத் தொலைபேசியில் மட்டுமே வைக்கப்படும்.',
   'This week': 'இந்த வாரம்',
   'This month': 'இந்த மாதம்',
   'All time': 'எல்லா நேரமும்',
 
   // ---------- core.js and geo.js ----------
-  "Can't reach A2B. Check your connection and try again.": 'A2B-ஐ அணுக முடியவில்லை. இணைப்பைச் சரிபார்த்து மீண்டும் முயலுங்கள்.',
-  'A2B is busy right now (it runs on free servers during the beta). Try again in a minute.':
-    'A2B இப்போது பரபரப்பாக உள்ளது (பீட்டா காலத்தில் இலவச சேவையகங்களில் இயங்குகிறது). ஒரு நிமிடம் கழித்து முயலுங்கள்.',
+  "Can't reach AutoDeck Maps. Check your connection and try again.": 'AutoDeck Maps-ஐ அணுக முடியவில்லை. இணைப்பைச் சரிபார்த்து மீண்டும் முயலுங்கள்.',
+  'AutoDeck Maps is busy right now (it runs on free servers during the beta). Try again in a minute.':
+    'AutoDeck Maps இப்போது பரபரப்பாக உள்ளது (பீட்டா காலத்தில் இலவச சேவையகங்களில் இயங்குகிறது). ஒரு நிமிடம் கழித்து முயலுங்கள்.',
   'Something went wrong ({status}).': 'ஏதோ தவறு நடந்தது ({status}).',
   'just now': 'இப்போதுதான்',
   '{n} min ago': '{n} நிமி முன்',
@@ -178,10 +178,10 @@ export default {
   '{h} h': '{h} மணி',
 
   // ---------- Messages from the server (src/), shown as they come ----------
-  'A2B is full right now. You will be let in when a spot opens.': 'A2B இப்போது நிரம்பியுள்ளது. இடம் காலியானதும் நீங்கள் உள்ளே அனுமதிக்கப்படுவீர்கள்.',
+  'AutoDeck Maps is full right now. You will be let in when a spot opens.': 'AutoDeck Maps இப்போது நிரம்பியுள்ளது. இடம் காலியானதும் நீங்கள் உள்ளே அனுமதிக்கப்படுவீர்கள்.',
   'Something went wrong on our side. Please try again in a minute.': 'எங்கள் பக்கத்தில் ஏதோ தவறு நடந்தது. ஒரு நிமிடம் கழித்து மீண்டும் முயலுங்கள்.',
-  'A2B is busy right now (it runs on free map servers during the beta). Try again in a minute.':
-    'A2B இப்போது பரபரப்பாக உள்ளது (பீட்டா காலத்தில் இலவச வரைபட சேவையகங்களில் இயங்குகிறது). ஒரு நிமிடம் கழித்து முயலுங்கள்.',
+  'AutoDeck Maps is busy right now (it runs on free map servers during the beta). Try again in a minute.':
+    'AutoDeck Maps இப்போது பரபரப்பாக உள்ளது (பீட்டா காலத்தில் இலவச வரைபட சேவையகங்களில் இயங்குகிறது). ஒரு நிமிடம் கழித்து முயலுங்கள்.',
   'Search service error ({n}).': 'தேடல் சேவையில் பிழை ({n}).',
   'No route found between these places.': 'இந்த இடங்களுக்கு இடையே பாதை எதுவும் கிடைக்கவில்லை.',
   'Sign in first.': 'முதலில் உள்நுழையுங்கள்.',

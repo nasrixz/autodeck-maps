@@ -8,7 +8,7 @@
 // index.html is translated as it stands (translatePage); text the app writes later goes through tr().
 // test/i18n.test.js checks the translations.
 
-// The languages A2B speaks, each named in itself, with its word for "language" (shown under Settings › Language).
+// The languages AutoDeck Maps speaks, each named in itself, with its word for "language" (shown under Settings › Language).
 // English is the code itself. Every other one has its words in public/i18n-<code>.js, fetched only by phones that
 // use it (the offline shell keeps them all). To add one: write its file like i18n-ms.js, list it here and in sw.js.
 export const LANGUAGES = [
@@ -24,7 +24,7 @@ let asked = 0;
 
 export const currentLang = () => lang;
 
-// The setting is 'auto' or a language code. Auto follows the phone: the first of its languages that A2B has.
+// The setting is 'auto' or a language code. Auto follows the phone: the first of its languages that AutoDeck Maps has.
 export function pickLang(setting, languages = globalThis.navigator?.languages ?? []) {
   const has = (code) => LANGUAGES.some((l) => l.code === code);
   if (has(setting)) return setting;

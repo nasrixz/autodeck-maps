@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 // Copyright (C) 2026 Thaqif Syarafuddin bin Roslan. A2B: https://github.com/thaqif0709/a2b (see NOTICE).
 
-// Keeps this device's spot in A2B (see src/lib/presence.js) by checking in every couple of minutes, and
+// Keeps this device's spot in AutoDeck Maps (see src/lib/presence.js) by checking in every couple of minutes, and
 // covers the app with a waiting screen when it's full, letting the driver in as soon as a spot opens.
 
 import { $, api, state, esc, presenceHook } from './core.js';
@@ -56,8 +56,8 @@ function renderGate(p) {
     : tr('Some spots are kept for drivers with an account, so signing up (free) gets you in sooner.');
 }
 
-// "12 of 50 drivers on A2B now", for the menu.
+// "12 of 50 drivers on AutoDeck Maps now", for the menu.
 export function onlineLine() {
   const p = state.presence;
-  return p?.admitted ? `<span class="dot"></span>${tr('{active} of {max} drivers on A2B now', { active: esc(String(p.active)), max: esc(String(p.max)) })}` : '';
+  return p?.admitted ? `<span class="dot"></span>${tr('{active} of {max} drivers on AutoDeck Maps now', { active: esc(String(p.active)), max: esc(String(p.max)) })}` : '';
 }

@@ -21,22 +21,22 @@ export const MAP_THEMES = {
     night: false,
     hide: /^poi_r(1|7|20)$/,
     rules: [
-      [/^background$/, { 'background-color': '#f7f2f5' }],
-      [/^landuse_residential$/, { 'fill-color': '#f1e8ee' }],
+      [/^background$/, { 'background-color': '#f3f6f6' }],
+      [/^landuse_residential$/, { 'fill-color': '#eaf0ef' }],
       [/^(park|landcover_wood|landcover_grass|landuse_cemetery|landuse_pitch)$/, { 'fill-color': '#e2ecdc' }],
       [/^water$/, { 'fill-color': '#c4d9ea' }],
       [/^waterway/, { 'line-color': '#c4d9ea' }],
-      [/^building$/, { 'fill-color': '#eadfe6' }],
-      [/^building-3d$/, { 'fill-extrusion-color': '#e6d7e0' }],
+      [/^building$/, { 'fill-color': '#e1e8e7' }],
+      [/^building-3d$/, { 'fill-extrusion-color': '#d8e2e0' }],
       [/(road|bridge|tunnel)_(minor|street|service_track|link)$/, { 'line-color': '#ffffff' }],
-      [/(road|bridge|tunnel)_(minor|street|service_track|link)_casing$/, { 'line-color': '#e2d3dc' }],
-      [/(road|bridge|tunnel)_secondary_tertiary$/, { 'line-color': '#fdf3f8' }],
-      [/(road|bridge|tunnel)_secondary_tertiary_casing$/, { 'line-color': '#dcb6cb' }],
-      [/(road|bridge|tunnel)_trunk_primary$/, { 'line-color': '#f8dceb' }],
-      [/(road|bridge|tunnel)_trunk_primary_casing$/, { 'line-color': '#c98aab' }],
-      [/(road|bridge|tunnel)_motorway(_link)?$/, { 'line-color': '#eeb6d2' }],
-      [/(road|bridge|tunnel)_motorway(_link)?_casing$/, { 'line-color': '#a8306d' }],
-      [/^label_|^highway-name/, { 'text-color': '#4a2a3c' }],
+      [/(road|bridge|tunnel)_(minor|street|service_track|link)_casing$/, { 'line-color': '#d3dcdb' }],
+      [/(road|bridge|tunnel)_secondary_tertiary$/, { 'line-color': '#f3fbf9' }],
+      [/(road|bridge|tunnel)_secondary_tertiary_casing$/, { 'line-color': '#b6d3cd' }],
+      [/(road|bridge|tunnel)_trunk_primary$/, { 'line-color': '#d7f2ec' }],
+      [/(road|bridge|tunnel)_trunk_primary_casing$/, { 'line-color': '#8ac2b6' }],
+      [/(road|bridge|tunnel)_motorway(_link)?$/, { 'line-color': '#9fe3d6' }],
+      [/(road|bridge|tunnel)_motorway(_link)?_casing$/, { 'line-color': '#0b9e8a' }],
+      [/^label_|^highway-name/, { 'text-color': '#22343a' }],
     ],
   },
 
@@ -78,7 +78,7 @@ export const MAP_THEMES = {
   fiord: { label: 'Fiord', base: 'fiord', night: true },
 };
 
-// OpenFreeMap "bright" recoloured with the app's plum (#751B4F); parks stay green and water stays blue.
+// OpenFreeMap "bright" recoloured with the app's plum (#08715f); parks stay green and water stays blue.
 function brightPlum(strength) {
   const c = {
     // Roads in quiet neutrals, so the plum route line is the one thing that stands out.

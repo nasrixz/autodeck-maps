@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 // Copyright (C) 2026 Thaqif Syarafuddin bin Roslan. A2B: https://github.com/thaqif0709/a2b (see NOTICE).
 
-// A place the base map draws (its `poi` and airport labels, from OpenStreetMap via OpenFreeMap), as A2B's routes
+// A place the base map draws (its `poi` and airport labels, from OpenStreetMap via OpenFreeMap), as AutoDeck Maps's routes
 // need it: a name and what kind of place it is. Tapping one shows the routes there (app.js tapPlaceOnMap).
 
 const KIND_NAMES = {

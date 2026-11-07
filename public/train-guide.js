@@ -8,7 +8,7 @@
 // "Next stop: X. Get off here." is said once, as the train leaves the stop before yours or about 90 s before it
 // gets there, whichever comes first. Everything here is plain logic; app.js draws and speaks it.
 //
-// This works while A2B is open. With the phone locked in a pocket a web page doesn't keep running: that needs the
+// This works while AutoDeck Maps is open. With the phone locked in a pocket a web page doesn't keep running: that needs the
 // native app's background location and notifications.
 
 import { distance, bearing, cumulative, angleDiff } from './geo.js';

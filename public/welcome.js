@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 // Copyright (C) 2026 Thaqif Syarafuddin bin Roslan. A2B: https://github.com/thaqif0709/a2b (see NOTICE).
 
-// First visit: a short welcome (what A2B is, that it's a beta, and how to put it on the home screen), shown
+// First visit: a short welcome (what AutoDeck Maps is, that it's a beta, and how to put it on the home screen), shown
 // once per device. Its "Let's go" is what asks for location, so the browser's prompt doesn't land on top of it.
 // It's where a driver first picks English or Bahasa Melayu (Settings has it too).
 // Also hides the launch splash once the map is ready.
@@ -20,8 +20,8 @@ export function welcome(done) {
   const showInstall = () => ($('welcome-install').innerHTML = installed()
     ? ''
     : isIos()
-      ? tr('<b>Use it like an app:</b> in Safari, tap Share <span class="w-ic">{icon}</span>, then <b>Add to Home Screen</b>, keep <b>Open as Web App</b> on, and open A2B from its new icon.', { icon: SHARE_ICON })
-      : tr('<b>Use it like an app:</b> in Chrome, tap ⋮, then <b>Add to home screen</b> (or <b>Install app</b>), and open A2B from its new icon.'));
+      ? tr('<b>Use it like an app:</b> in Safari, tap Share <span class="w-ic">{icon}</span>, then <b>Add to Home Screen</b>, keep <b>Open as Web App</b> on, and open AutoDeck Maps from its new icon.', { icon: SHARE_ICON })
+      : tr('<b>Use it like an app:</b> in Chrome, tap ⋮, then <b>Add to home screen</b> (or <b>Install app</b>), and open AutoDeck Maps from its new icon.'));
   const langs = $('welcome-lang');
   langs.innerHTML = LANGUAGES.map((l) => `<button data-lang="${l.code}" lang="${l.code}">${l.name}</button>`).join('');
   const markLang = () => langs.querySelectorAll('button').forEach((b) => b.classList.toggle('on', b.dataset.lang === currentLang()));

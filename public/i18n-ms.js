@@ -15,7 +15,7 @@ export default {
   'Point map north': 'Halakan peta ke utara',
   'Show my location': 'Tunjukkan lokasi saya',
   'Report': 'Lapor',
-  'My A2B': 'A2B Saya',
+  'My AutoDeck Maps': 'AutoDeck Maps Saya',
   'Search': 'Cari',
   'Find the nearest': 'Cari yang terdekat',
   'Petrol': 'Minyak',
@@ -43,8 +43,8 @@ export default {
   'Suggest a place': 'Cadangkan tempat',
   'Arrived': 'Sudah tiba',
   'Report details': 'Butiran laporan',
-  'Welcome to A2B': 'Selamat datang ke A2B',
-  'A2B is full': 'A2B penuh',
+  'Welcome to AutoDeck Maps': 'Selamat datang ke AutoDeck Maps',
+  'AutoDeck Maps is full': 'AutoDeck Maps penuh',
   'Account': 'Akaun',
   'Shared drive': 'Perjalanan dikongsi',
   'Add a comment (optional)': 'Tambah komen (pilihan)',
@@ -55,7 +55,7 @@ export default {
   'km/h': 'km/j',
   'Where to?': 'Ke mana?',
   'Search for an address': 'Cari alamat',
-  'Turn on location so A2B can show where you are.': 'Hidupkan lokasi supaya A2B boleh tunjukkan di mana anda berada.',
+  'Turn on location so AutoDeck Maps can show where you are.': 'Hidupkan lokasi supaya AutoDeck Maps boleh tunjukkan di mana anda berada.',
   'Try again': 'Cuba lagi',
   'Home': 'Rumah',
   'Set location': 'Tetapkan lokasi',
@@ -115,7 +115,7 @@ export default {
   // ---------- index.html: menu, welcome, waiting screen, account ----------
   'Top drivers': 'Pemandu terbaik',
   'Add to home screen': 'Tambah ke skrin utama',
-  'Update A2B': 'Kemas kini A2B',
+  'Update AutoDeck Maps': 'Kemas kini AutoDeck Maps',
   'Refresh': 'Muat semula',
   'About': 'Perihal',
   'Log out': 'Log keluar',
@@ -123,13 +123,13 @@ export default {
     'Navigasi percuma untuk Malaysia, dibina oleh seorang dengan bantuan pembantu pengekodan AI dan masih diperbaiki.',
   'Search places, pick a route, and get turn-by-turn voice': 'Cari tempat, pilih laluan dan dapatkan arahan suara setiap selekoh',
   'It\'s a beta: 50 drivers at a time, and no CarPlay or Android Auto yet': 'Ini versi beta: 50 pemandu pada satu masa, dan belum ada CarPlay atau Android Auto',
-  'Next, your phone asks to share your location so A2B can show where you are':
-    'Seterusnya, telefon anda akan meminta untuk berkongsi lokasi supaya A2B boleh tunjukkan di mana anda berada',
+  'Next, your phone asks to share your location so AutoDeck Maps can show where you are':
+    'Seterusnya, telefon anda akan meminta untuk berkongsi lokasi supaya AutoDeck Maps boleh tunjukkan di mana anda berada',
   'Let\'s go': 'Jom mula',
-  'A2B is full right now': 'A2B penuh sekarang',
+  'AutoDeck Maps is full right now': 'AutoDeck Maps penuh sekarang',
   'drivers are using it': 'pemandu sedang menggunakannya',
-  'A2B is a beta running on free map servers, so only so many people can use it at once.':
-    'A2B ialah versi beta yang berjalan di pelayan peta percuma, jadi hanya sebilangan orang boleh menggunakannya pada satu masa.',
+  'AutoDeck Maps is a beta running on free map servers, so only so many people can use it at once.':
+    'AutoDeck Maps ialah versi beta yang berjalan di pelayan peta percuma, jadi hanya sebilangan orang boleh menggunakannya pada satu masa.',
   'Sign up free': 'Daftar percuma',
   'Sign up': 'Daftar',
   'Join other drivers. Report what you see on the road and get thanked for it.':
@@ -144,10 +144,10 @@ export default {
 
   // ---------- welcome.js ----------
   // Safari's and Chrome's own button names stay in English, as most phones here show them.
-  '<b>Use it like an app:</b> in Safari, tap Share <span class="w-ic">{icon}</span>, then <b>Add to Home Screen</b>, keep <b>Open as Web App</b> on, and open A2B from its new icon.':
-    '<b>Guna seperti aplikasi:</b> dalam Safari, ketik Share <span class="w-ic">{icon}</span>, kemudian <b>Add to Home Screen</b>, biarkan <b>Open as Web App</b> dihidupkan, dan buka A2B dari ikon barunya.',
-  '<b>Use it like an app:</b> in Chrome, tap ⋮, then <b>Add to home screen</b> (or <b>Install app</b>), and open A2B from its new icon.':
-    '<b>Guna seperti aplikasi:</b> dalam Chrome, ketik ⋮, kemudian <b>Add to home screen</b> (atau <b>Install app</b>), dan buka A2B dari ikon barunya.',
+  '<b>Use it like an app:</b> in Safari, tap Share <span class="w-ic">{icon}</span>, then <b>Add to Home Screen</b>, keep <b>Open as Web App</b> on, and open AutoDeck Maps from its new icon.':
+    '<b>Guna seperti aplikasi:</b> dalam Safari, ketik Share <span class="w-ic">{icon}</span>, kemudian <b>Add to Home Screen</b>, biarkan <b>Open as Web App</b> dihidupkan, dan buka AutoDeck Maps dari ikon barunya.',
+  '<b>Use it like an app:</b> in Chrome, tap ⋮, then <b>Add to home screen</b> (or <b>Install app</b>), and open AutoDeck Maps from its new icon.':
+    '<b>Guna seperti aplikasi:</b> dalam Chrome, ketik ⋮, kemudian <b>Add to home screen</b> (atau <b>Install app</b>), dan buka AutoDeck Maps dari ikon barunya.',
 
   // ---------- presence.js: the waiting screen ----------
   '{active} of {max}': '{active} daripada {max}',
@@ -157,19 +157,19 @@ export default {
     'Anda sudah log masuk, jadi anda boleh ambil mana-mana tempat yang kosong, termasuk yang dikhaskan untuk akaun.',
   'Some spots are kept for drivers with an account, so signing up (free) gets you in sooner.':
     'Sesetengah tempat dikhaskan untuk pemandu yang ada akaun, jadi daftar (percuma) supaya anda masuk lebih cepat.',
-  '{active} of {max} drivers on A2B now': '{active} daripada {max} pemandu di A2B sekarang',
+  '{active} of {max} drivers on AutoDeck Maps now': '{active} daripada {max} pemandu di AutoDeck Maps sekarang',
 
   // ---------- panels.js: Settings › Fuel ----------
   'Fuel spent': 'Minyak dibelanjakan',
-  "An estimate: how far you drove by car with A2B, at your car's fuel use and that week's pump price. Electric cars count as nothing. Kept on this phone only.": 'Anggaran: jarak yang anda pandu dengan kereta menggunakan A2B, ikut penggunaan minyak kereta anda dan harga pam minggu itu. Kereta elektrik dikira sifar. Disimpan dalam telefon ini sahaja.',
+  "An estimate: how far you drove by car with AutoDeck Maps, at your car's fuel use and that week's pump price. Electric cars count as nothing. Kept on this phone only.": 'Anggaran: jarak yang anda pandu dengan kereta menggunakan AutoDeck Maps, ikut penggunaan minyak kereta anda dan harga pam minggu itu. Kereta elektrik dikira sifar. Disimpan dalam telefon ini sahaja.',
   'This week': 'Minggu ini',
   'This month': 'Bulan ini',
   'All time': 'Sepanjang masa',
 
   // ---------- core.js and geo.js ----------
-  "Can't reach A2B. Check your connection and try again.": 'Tidak dapat menghubungi A2B. Semak sambungan anda dan cuba lagi.',
-  'A2B is busy right now (it runs on free servers during the beta). Try again in a minute.':
-    'A2B sibuk sekarang (ia berjalan di pelayan percuma semasa beta). Cuba lagi dalam seminit.',
+  "Can't reach AutoDeck Maps. Check your connection and try again.": 'Tidak dapat menghubungi AutoDeck Maps. Semak sambungan anda dan cuba lagi.',
+  'AutoDeck Maps is busy right now (it runs on free servers during the beta). Try again in a minute.':
+    'AutoDeck Maps sibuk sekarang (ia berjalan di pelayan percuma semasa beta). Cuba lagi dalam seminit.',
   'Something went wrong ({status}).': 'Ada yang tidak kena ({status}).',
   'just now': 'baru tadi',
   '{n} min ago': '{n} min lalu',
@@ -179,10 +179,10 @@ export default {
   '{h} h': '{h} j',
 
   // ---------- Messages from the server (src/), shown as they come ----------
-  'A2B is full right now. You will be let in when a spot opens.': 'A2B penuh sekarang. Anda akan dibenarkan masuk apabila ada tempat kosong.',
+  'AutoDeck Maps is full right now. You will be let in when a spot opens.': 'AutoDeck Maps penuh sekarang. Anda akan dibenarkan masuk apabila ada tempat kosong.',
   'Something went wrong on our side. Please try again in a minute.': 'Ada masalah di pihak kami. Sila cuba lagi dalam seminit.',
-  'A2B is busy right now (it runs on free map servers during the beta). Try again in a minute.':
-    'A2B sibuk sekarang (ia berjalan di pelayan peta percuma semasa beta). Cuba lagi dalam seminit.',
+  'AutoDeck Maps is busy right now (it runs on free map servers during the beta). Try again in a minute.':
+    'AutoDeck Maps sibuk sekarang (ia berjalan di pelayan peta percuma semasa beta). Cuba lagi dalam seminit.',
   'Search service error ({n}).': 'Ralat perkhidmatan carian ({n}).',
   'No route found between these places.': 'Tiada laluan ditemui antara tempat-tempat ini.',
   'Sign in first.': 'Log masuk dahulu.',

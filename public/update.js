@@ -8,7 +8,7 @@
 // - otherwise (picking a route, say), a small pill says so once and fades away; over a full screen (search,
 //   settings) it waits for that to close, so it never covers what someone is typing;
 // - while driving, nothing until the trip ends.
-// After the pill, a dot on the menu button and an "Update A2B" row in the menu stay until the refresh.
+// After the pill, a dot on the menu button and an "Update AutoDeck Maps" row in the menu stay until the refresh.
 
 import { $ } from './core.js';
 

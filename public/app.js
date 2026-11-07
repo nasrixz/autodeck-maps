@@ -48,7 +48,7 @@ const styleUrl = (t) => BASE_STYLES[MAP_THEMES[mapThemeId(t)].base];
 // The stretch already driven stays visible in a muted tone.
 const ROUTE = {
   day: { main: '#ffbade', casing: '#4a0f31', driven: '#c3b3bd', drivenCasing: '#8f7a87' },
-  night: { main: '#ffbade', casing: '#5e1640', driven: '#8a7684', drivenCasing: '#3b2f39' },
+  night: { main: '#ffbade', casing: '#04403a', driven: '#8a7684', drivenCasing: '#3b2f39' },
 };
 // Walks use the same pink route colour as dots, including the walks in train trips.
 const WALK_DOTS = { day: ROUTE.day.main, night: ROUTE.night.main };
@@ -216,6 +216,8 @@ async function boot() {
     pixelRatio: Math.min(devicePixelRatio, 2), // 3x screens cost a lot of GPU (and heat) for little gain on a moving map
     maxPitch: 65,
   });
+  // AutoDeck: the car Home's Map widget pans the map by message (embed.js).
+  window.__autodeckMap = map;
   map.touchPitch.disable();
   // Let a flick carry the map on and ease to a stop, instead of MapLibre's default quick brake.
   map.dragPan.enable({ linearity: 0.25, easing: (t) => 1 - (1 - t) ** 3, deceleration: 1400, maxSpeed: 2000 });
@@ -393,7 +395,7 @@ function nightNow() {
 function applyTheme(initial = false) {
   const t = state.settings.theme === 'auto' ? (nightNow() ? 'night' : 'day') : state.settings.theme;
   document.documentElement.dataset.theme = t;
-  document.querySelector('meta[name=theme-color]').content = t === 'night' ? '#161b22' : '#751b4f';
+  document.querySelector('meta[name=theme-color]').content = t === 'night' ? '#161b22' : '#08715f';
   if (themeNow !== t) {
     themeNow = t;
     // Day and night can share a base style. A diff against that same style quietly drops our recolouring and
@@ -544,7 +546,7 @@ function arrowHeadImage() {
 // A rounded amber tag reading TOLL, for toll plazas on the map.
 // ---------- Places on the map you can tap to go ----------
 // Petrol stations, EV chargers, hospitals, clinics and convenience stores come from this phone's Overture files
-// (public/places.js; EV chargers also from the server's list), drawn by A2B when the map is zoomed in far enough to be useful, while browsing or choosing a
+// (public/places.js; EV chargers also from the server's list), drawn by AutoDeck Maps when the map is zoomed in far enough to be useful, while browsing or choosing a
 // route (not while driving). Stations (LRT, MRT, KTM, monorail, buses), landmarks and the airport are already on
 // the base map from OpenStreetMap; tapping those works too. Either way, a tap shows the routes there.
 // EV chargers: the server keeps OpenStreetMap's and Open Charge Map's (src/lib/chargers.js); Overture's few are in the files.
@@ -557,7 +559,7 @@ const BASE_PLACE_LAYERS = new Set(['poi', 'aerodrome_label']); // the base map's
 const TAP_SLOP = 12; // px around a tap, for fingertips
 let basePlaceLayers = []; // this style's layers drawing those, found when it loads
 
-// The place drawn under a point on the screen, A2B's own first, or null.
+// The place drawn under a point on the screen, AutoDeck Maps's own first, or null.
 function placeAt(point) {
   if (!map?.isStyleLoaded() || !['browse', 'preview'].includes(mode)) return null;
   const box = [[point.x - TAP_SLOP, point.y - TAP_SLOP], [point.x + TAP_SLOP, point.y + TAP_SLOP]];
@@ -1908,7 +1910,7 @@ function drawTransit() {
 
 // ---------- Picking a trip up again ----------
 // iPhones close a page in the background to save memory, and a trip in progress goes with it. The trip is kept on
-// this phone while it runs; opening A2B again within a few hours offers to carry on, planned again from where you
+// this phone while it runs; opening AutoDeck Maps again within a few hours offers to carry on, planned again from where you
 // are then (a train trip offline: as it was, from the leg it had reached).
 const RESUME_MS = 3 * 3600_000;
 let resuming = null, resumeLeg = 0, savedLeg = -1;
@@ -1963,7 +1965,7 @@ function resumeStart() {
 // "Start" on a train trip follows it (train-guide.js): the walk to the station, which train, the next station as the
 // train goes (estimated underground from the timetable), "get off at the next stop", any change, and the walk at the
 // end. A train marker in the line's colour shows where you are on a ride, the chevron on foot. The trip line stays
-// drawn. Nothing from a train trip is shared as traffic or as a live trip. Works while A2B is open on screen.
+// drawn. Nothing from a train trip is shared as traffic or as a live trip. Works while AutoDeck Maps is open on screen.
 const TRAIN_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2.5" width="12" height="15" rx="3.5" fill="currentColor"/><rect x="8" y="5.5" width="8" height="4.5" rx="1" fill="#000" fill-opacity=".35"/><circle cx="9.2" cy="14" r="1.3" fill="#000" fill-opacity=".45"/><circle cx="14.8" cy="14" r="1.3" fill="#000" fill-opacity=".45"/><path d="m8.5 21.5 2-3.5m5 3.5-2-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
 let guide = null, rideTimer = null, riderMarker = null, rideGpsBlocked = false, rideTimeShift = 0, rideStarted = 0;
 // The guide moves you once a second; between those, every animation frame slides the train along the track (or the
@@ -2425,7 +2427,7 @@ function routeNote(rs) {
 }
 
 // The weather on the way and on arrival for a route, leaving now, plus rest tips for a long or night drive (see
-// weather.js). The weather is extra: a failure or a full A2B just leaves it out. Each route's answer is kept, so
+// weather.js). The weather is extra: a failure or a full AutoDeck Maps just leaves it out. Each route's answer is kept, so
 // switching between routes doesn't ask again.
 async function loadWeather(route) {
   if (!route || state.settings.weather === false) return renderWeather(null);
@@ -2859,9 +2861,9 @@ function downloadCalendar() {
   const stamp = (d) => d.toISOString().replace(/[-:]/g, '').replace(/\.\d+/, '');
   const link = `${location.origin}/?to=${dest.lat},${dest.lng}&name=${encodeURIComponent(dest.name)}`;
   const ics = [
-    'BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//A2B//Leave later//EN', 'BEGIN:VEVENT',
+    'BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//AutoDeck Maps//Leave later//EN', 'BEGIN:VEVENT',
     `UID:${Date.now()}@a2b`, `DTSTAMP:${stamp(new Date())}`, `DTSTART:${stamp(leave)}`, `DTEND:${stamp(arrive)}`,
-    `SUMMARY:${byTrain ? 'Train' : 'Drive'} to ${dest.name.replace(/[,;\n]/g, ' ')}`, `DESCRIPTION:${steps ? `${ical(steps)}\\n` : ''}Open in A2B: ${link}`, `URL:${link}`,
+    `SUMMARY:${byTrain ? 'Train' : 'Drive'} to ${dest.name.replace(/[,;\n]/g, ' ')}`, `DESCRIPTION:${steps ? `${ical(steps)}\\n` : ''}Open in AutoDeck Maps: ${link}`, `URL:${link}`,
     'BEGIN:VALARM', 'TRIGGER:-PT10M', 'ACTION:DISPLAY', 'DESCRIPTION:Time to leave soon', 'END:VALARM', 'END:VEVENT', 'END:VCALENDAR',
   ].join('\r\n');
   const a = document.createElement('a');
@@ -3660,7 +3662,7 @@ function startWatching(token) {
   const sheet = $('watch');
   sheet.classList.remove('hidden');
   sheet.innerHTML = '<div class="grabber"></div><p class="hint">Loading drive…</p>';
-  const openLink = '<a class="btn ghost wide" style="display:grid;place-items:center;text-decoration:none" href="/">Open A2B</a>';
+  const openLink = '<a class="btn ghost wide" style="display:grid;place-items:center;text-decoration:none" href="/">Open AutoDeck Maps</a>';
   let fitted = false;
   let driverMarker = null;
   let follow = null;

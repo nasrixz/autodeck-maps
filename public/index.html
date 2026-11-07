@@ -5,11 +5,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#751b4f">
+  <meta name="theme-color" content="#0b0f1a">
   <meta name="description" content="Drive from A to B with live routes, voice directions and road reports from other drivers.">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <title>A2B</title>
+  <title>AutoDeck Maps</title>
   <link rel="manifest" href="/manifest.webmanifest">
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/icon-192.png">
@@ -20,7 +20,7 @@
   <!-- Launch splash: covers the blank map until it's drawn (welcome.js hides it) -->
   <div id="splash" class="splash" aria-hidden="true">
     <img src="/icon.svg" alt="" width="96" height="96">
-    <b translate="no">A2B</b>
+    <b translate="no">AutoDeck Maps</b>
     <span class="splash-spin"></span>
   </div>
   <div id="map" aria-label="Map"></div>
@@ -37,11 +37,11 @@
     <div class="speedo hidden" id="speedo-browse"><b>0</b><small>km/h</small></div>
     <button id="btn-report" class="report-fab" aria-label="Report"><svg viewBox="0 0 24 24"><path d="M12 3.5 2.8 19.5h18.4Z" fill="none" stroke="#fff" stroke-width="2.4" stroke-linejoin="round"/><path d="M12 9.5v4.5" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/><circle cx="12" cy="17" r="1.4" fill="#fff"/></svg></button>
     <div class="bottom-bar">
-      <button id="btn-menu" class="avatar-btn" aria-label="My A2B"><span id="avatar">?</span></button>
+      <button id="btn-menu" class="avatar-btn" aria-label="My AutoDeck Maps"><span id="avatar">?</span></button>
       <button id="btn-where" class="where-to"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="m15.5 15.5 5 5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg><span>Where to?</span></button>
     </div>
     <div id="loc-banner" class="loc-banner hidden">
-      <span>Turn on location so A2B can show where you are.</span>
+      <span>Turn on location so AutoDeck Maps can show where you are.</span>
       <button id="btn-loc-retry">Try again</button>
     </div>
   </div>
@@ -294,9 +294,9 @@
   <!-- ===== Report details (tap a pin) ===== -->
   <section id="report-card" class="sheet hidden" aria-label="Report details"></section>
 
-  <!-- ===== My A2B menu ===== -->
+  <!-- ===== My AutoDeck Maps menu ===== -->
   <div id="menu-backdrop" class="backdrop hidden"></div>
-  <aside id="menu" class="drawer hidden" aria-label="My A2B">
+  <aside id="menu" class="drawer hidden" aria-label="My AutoDeck Maps">
     <div class="profile" id="profile"></div>
     <p class="online-line" id="m-online"></p>
     <nav class="menu-list">
@@ -304,37 +304,37 @@
       <button class="menu-row" id="m-leaders"><span class="m-ic trophy"></span>Top drivers</button>
       <button class="menu-row" id="m-settings"><span class="m-ic gear"></span>Settings</button>
       <button class="menu-row" id="m-install"><span class="m-ic phone"></span>Add to home screen</button>
-      <button class="menu-row hidden" id="m-update"><span class="m-ic refresh"></span>Update A2B<span class="m-new">Refresh</span></button>
+      <button class="menu-row hidden" id="m-update"><span class="m-ic refresh"></span>Update AutoDeck Maps<span class="m-new">Refresh</span></button>
       <button class="menu-row" id="m-about"><span class="m-ic info"></span>About</button>
       <button class="menu-row hidden" id="m-logout"><span class="m-ic out"></span>Log out</button>
     </nav>
   </aside>
 
   <!-- ===== First visit welcome (welcome.js) ===== -->
-  <section id="welcome" class="gate welcome hidden" aria-label="Welcome to A2B">
+  <section id="welcome" class="gate welcome hidden" aria-label="Welcome to AutoDeck Maps">
     <div class="gate-card">
       <div id="welcome-lang" class="w-lang" translate="no"></div>
       <img src="/icon.svg" alt="" width="64" height="64">
-      <h2>Welcome to A2B</h2>
+      <h2>Welcome to AutoDeck Maps</h2>
       <p>Free navigation for Malaysia, built by one person with an AI coding assistant and still improving.</p>
       <ul class="w-list">
         <li><span>🗺️</span>Search places, pick a route, and get turn-by-turn voice</li>
         <li><span>🚧</span>It's a beta: 50 drivers at a time, and no CarPlay or Android Auto yet</li>
-        <li><span>📍</span>Next, your phone asks to share your location so A2B can show where you are</li>
+        <li><span>📍</span>Next, your phone asks to share your location so AutoDeck Maps can show where you are</li>
       </ul>
       <p id="welcome-install" class="w-install"></p>
       <button id="welcome-go" class="btn primary wide">Let's go</button>
     </div>
   </section>
 
-  <!-- ===== Waiting screen, when A2B is full (presence.js) ===== -->
-  <section id="gate" class="gate hidden" aria-live="polite" aria-label="A2B is full">
+  <!-- ===== Waiting screen, when AutoDeck Maps is full (presence.js) ===== -->
+  <section id="gate" class="gate hidden" aria-live="polite" aria-label="AutoDeck Maps is full">
     <div class="gate-card">
       <img src="/icon.svg" alt="" width="64" height="64">
-      <h2>A2B is full right now</h2>
+      <h2>AutoDeck Maps is full right now</h2>
       <p class="gate-count"><b id="gate-count"></b> drivers are using it</p>
       <p id="gate-wait"></p>
-      <p class="gate-why">A2B is a beta running on free map servers, so only so many people can use it at once.</p>
+      <p class="gate-why">AutoDeck Maps is a beta running on free map servers, so only so many people can use it at once.</p>
       <p id="gate-priority" class="gate-why"></p>
       <button id="gate-signup" class="btn primary wide">Sign up free</button>
       <button id="gate-retry" class="btn ghost wide">Try again</button>
@@ -375,6 +375,7 @@
   <div id="toast" class="toast hidden" role="status"></div>
   <div id="ctx" class="ctx hidden"></div>
 
+  <script src="/embed.js"></script>
   <script src="/vendor/maplibre-gl-4.7.1/maplibre-gl.js"></script>
   <script type="module" src="/app.js"></script>
 </body>

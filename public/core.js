@@ -65,7 +65,7 @@ export async function api(path, { method = 'GET', body, retry = true } = {}) {
     credentials: 'same-origin',
     signal: AbortSignal.timeout?.(API_TIMEOUT_MS),
   }).catch(() => {
-    throw Object.assign(new Error(tr("Can't reach A2B. Check your connection and try again.")), { status: 0 });
+    throw Object.assign(new Error(tr("Can't reach AutoDeck Maps. Check your connection and try again.")), { status: 0 });
   });
   const data = await res.json().catch(() => ({}));
   // Turned away for want of a spot: usually this device's spot lapsed (the app was away for over 5 minutes) or
@@ -73,7 +73,7 @@ export async function api(path, { method = 'GET', body, retry = true } = {}) {
   if (data.code === 'full' && retry && (await presenceHook.recheck?.())) return api(path, { method, body, retry: false });
   // Without a message of our own, a 429 or 5xx came from Cloudflare itself, e.g. the free plan's daily cap.
   const busy = res.status === 429 || res.status >= 500;
-  const fallback = busy ? tr('A2B is busy right now (it runs on free servers during the beta). Try again in a minute.') : tr('Something went wrong ({status}).', { status: res.status });
+  const fallback = busy ? tr('AutoDeck Maps is busy right now (it runs on free servers during the beta). Try again in a minute.') : tr('Something went wrong ({status}).', { status: res.status });
   if (!res.ok) throw Object.assign(new Error(trServer(data.error) || fallback), { status: res.status, code: data.code });
   return data;
 }

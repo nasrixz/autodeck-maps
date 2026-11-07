@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 // Copyright (C) 2026 Thaqif Syarafuddin bin Roslan. A2B: https://github.com/thaqif0709/a2b (see NOTICE).
 
-// "My A2B" menu, sign in / sign up, settings, saved places, leaderboard and about.
+// "My AutoDeck Maps" menu, sign in / sign up, settings, saved places, leaderboard and about.
 
 import { $, state, api, local, toast, esc, initials, saveSettings, setHomeWork, removePlace, renamePlace, armBack, speak } from './core.js';
 import { PLACE_ICONS } from './icons.js';
@@ -332,7 +332,7 @@ export function openProbeConsent() {
 function fuelSpent() {
   const s = fuelSummary(local.get('fuelLog'));
   const tile = (label, { m, rm }) => `<div class="stat"><small>${label}</small><b>${rmLabel(rm)}</b><small>${formatDistance(m, state.settings.units)}</small></div>`;
-  return `<div class="set-row"><span>${tr('Fuel spent')}<small>${tr("An estimate: how far you drove by car with A2B, at your car's fuel use and that week's pump price. Electric cars count as nothing. Kept on this phone only.")}</small></span></div>
+  return `<div class="set-row"><span>${tr('Fuel spent')}<small>${tr("An estimate: how far you drove by car with AutoDeck Maps, at your car's fuel use and that week's pump price. Electric cars count as nothing. Kept on this phone only.")}</small></span></div>
       <div class="stats fuel-spent">${tile(tr('This week'), s.week)}${tile(tr('This month'), s.month)}${tile(tr('All time'), s.all)}</div>`;
 }
 
@@ -394,9 +394,9 @@ export function openSettings() {
       <button class="set-row" id="s-feedback"><span>Send feedback<small>Ideas, bugs, a wrong road or a missing place. It goes straight to the developer.</small></span></button>
     </div>
     ${state.tester ? `<div class="set-group"><h3>Testing</h3>
-      <button class="set-row" id="s-usage"><span>Usage<small>Who's on A2B now, and the last two weeks</small></span></button>
+      <button class="set-row" id="s-usage"><span>Usage<small>Who's on AutoDeck Maps now, and the last two weeks</small></span></button>
       <button class="set-row" id="s-inbox"><span>Feedback<small>What drivers sent from Settings, and places they suggested</small></span></button>
-      <label class="set-row"><span>Demo drive<small>Simulate GPS along the route. Handy for trying A2B at a desk.</small></span><input type="checkbox" class="switch" id="s-sim" ${state.simulate ? 'checked' : ''}></label>
+      <label class="set-row"><span>Demo drive<small>Simulate GPS along the route. Handy for trying AutoDeck Maps at a desk.</small></span><input type="checkbox" class="switch" id="s-sim" ${state.simulate ? 'checked' : ''}></label>
       <div class="set-row${state.simulate ? '' : ' hidden'}" id="s-sim-speed-row"><span>Demo speed<small>How fast the demo car drives</small></span><div class="choice" id="s-sim-speed">${[1, 2, 4, 8]
         .map((v) => `<button data-v="${v}" class="${local.get('simSpeed', 1) === v ? 'on' : ''}">${v}×</button>`)
         .join('')}</div></div>
@@ -640,7 +640,7 @@ async function openInbox(tab = 'messages') {
   const when = (ms) => new Date(ms).toLocaleString([], { day: 'numeric', month: 'short', hour: 'numeric', minute: '2-digit' });
   const item = (f) => `<div class="fb-item${f.closed_at ? ' closed' : ''}" data-id="${f.id}">
     <p>${esc(f.message)}</p>
-    <small>${f.email ? `${esc(f.name)} · <a href="mailto:${esc(f.email)}?subject=${encodeURIComponent('Your A2B feedback')}">${esc(f.email)}</a>` : 'Guest'} · ${esc(when(f.created_at))} · ${esc(device(f.ua ?? ''))}${f.app ? ` · ${esc(f.app)}` : ''}</small>
+    <small>${f.email ? `${esc(f.name)} · <a href="mailto:${esc(f.email)}?subject=${encodeURIComponent('Your AutoDeck Maps feedback')}">${esc(f.email)}</a>` : 'Guest'} · ${esc(when(f.created_at))} · ${esc(device(f.ua ?? ''))}${f.app ? ` · ${esc(f.app)}` : ''}</small>
     <div class="fb-actions">${f.closed_at ? `<span class="fb-tag">Closed · ${esc(when(f.closed_at))}</span><button class="btn ghost" data-reopen>Reopen</button>` : '<button class="btn ghost" data-close>Close</button>'}</div>
   </div>`;
   const render = () => {
@@ -759,14 +759,14 @@ function usageHtml({ now, days, totals }) {
         <span class="u-away">${d.turned_away ? `${d.turned_away} away` : ''}</span>
       </div>`)
       .join('')}</div>
-    <p class="hint" style="padding:6px 18px 0">Devices: phones and browsers that opened A2B that day. Peak: most on at once. Away: devices that hit the waiting screen. ${totals.accounts} accounts and ${totals.reports} reports in all.</p>
+    <p class="hint" style="padding:6px 18px 0">Devices: phones and browsers that opened AutoDeck Maps that day. Peak: most on at once. Away: devices that hit the waiting screen. ${totals.accounts} accounts and ${totals.reports} reports in all.</p>
   </div>`;
 }
 
 function openAbout() {
-  openPanel('About A2B', `<div class="about">
+  openPanel('About AutoDeck Maps', `<div class="about">
     <img src="/icon.svg" alt="" width="64" height="64">
-    <p><b style="color:var(--text)">A2B</b> gets you from A to B with live directions and reports from drivers around you.</p>
+    <p><b style="color:var(--text)">AutoDeck Maps</b> gets you from A to B with live directions and reports from drivers around you.</p>
     <p>Keep your eyes on the road. Only use the app when it is safe and legal to do so. Reports from other drivers can be wrong.</p>
     <p>Map data © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a>.
        Map tiles by <a href="https://openfreemap.org" target="_blank" rel="noopener">OpenFreeMap</a>.
@@ -776,8 +776,10 @@ function openAbout() {
        Pump prices from <a href="https://data.gov.my/data-catalogue/fuelprice" target="_blank" rel="noopener">data.gov.my</a>.
        Shops and places also from <a href="https://overturemaps.org" target="_blank" rel="noopener">Overture Maps Foundation</a> (Meta, Microsoft, Foursquare, AllThePlaces and others; <a href="/places/NOTICE.txt" target="_blank">licences</a>).
        EV chargers also from <a href="https://openchargemap.org" target="_blank" rel="noopener">Open Charge Map</a> (<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>).</p>
-    <p>A2B is free and open source. <a href="https://github.com/thaqif0709/a2b" target="_blank" rel="noopener">Source code</a>, ideas and bug reports welcome, or send feedback from Settings.</p>
-    <p class="about-credit">© 2026 Thaqif Syarafuddin bin Roslan and the A2B contributors.
+    <p><b style="color:var(--text)">Based on A2B by Thaqif Syarafuddin bin Roslan (<a href="https://github.com/thaqif0709/a2b" target="_blank" rel="noopener">https://github.com/thaqif0709/a2b</a>)</b></p>
+    <p>AutoDeck Maps is a modified version of A2B, changed for AutoDeck (an Android Auto app). It is not the original A2B and is not made or endorsed by its author.
+       It is free and open source: <a href="https://github.com/nasrixz/autodeck-maps" target="_blank" rel="noopener">source code of this version</a>.</p>
+    <p class="about-credit">© 2026 Thaqif Syarafuddin bin Roslan and the A2B contributors. Changes for AutoDeck © 2026 Nasri.
        <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank" rel="noopener">GNU AGPL v3</a> with
        <a href="https://github.com/thaqif0709/a2b/blob/main/NOTICE" target="_blank" rel="noopener">additional terms</a>.</p>
     <!-- Copies and modified versions must keep this credit (NOTICE, AGPL section 7(b)):
@@ -797,6 +799,6 @@ async function install() {
     ios
       ? 'In Safari, tap the <b>Share</b> button, then <b>Add to Home Screen</b>.'
       : 'Open your browser menu (⋮) and choose <b>Install app</b> or <b>Add to Home screen</b>.'
-  }</p><p>A2B then opens full screen, like an app.</p></div>`);
+  }</p><p>AutoDeck Maps then opens full screen, like an app.</p></div>`);
 }
 
