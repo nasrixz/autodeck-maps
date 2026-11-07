@@ -20,7 +20,7 @@ export function httpError(message, status) {
 
 // The free map servers A2B leans on turn people away when they're overloaded (429 or 5xx) or stop answering.
 // Say so plainly instead of reporting "no route", since trying again a little later usually works.
-export const BUSY_MESSAGE = 'A2B is busy right now (it runs on free map servers during the beta). Try again in a minute.';
+export const BUSY_MESSAGE = 'AutoDeck Maps is busy right now (it runs on free map servers during the beta). Try again in a minute.';
 
 async function upstream(url, init) {
   let res;
