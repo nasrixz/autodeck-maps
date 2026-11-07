@@ -1,3 +1,21 @@
+# AutoDeck Maps
+
+**Based on A2B by Thaqif Syarafuddin bin Roslan (https://github.com/thaqif0709/a2b)**
+
+AutoDeck Maps is a modified version of A2B, changed to run as the Map widget on the car Home screen of AutoDeck (an
+Android Auto app). It is not the original A2B and is not made or endorsed by its author. Changes from A2B:
+
+- Its own name, icon and teal colours.
+- Embed mode (`public/embed.js`, `public/embed.css`): no welcome screen; the car's location, the car keyboard's
+  text and the car's swipes come from AutoDeck by `postMessage`; layouts for every tile size from 3x3 to full screen.
+- The page may be shown inside AutoDeck's car page (no `X-Frame-Options` / `frame-ancestors`).
+- Its own Cloudflare Worker and database, and 300 drivers at a time.
+
+Live copy: https://autodeck-maps.autodeck-maps.workers.dev · Licence: GNU AGPL v3 or later with the additional terms
+in [NOTICE](NOTICE), as for A2B. The original README follows.
+
+---
+
 <div align="center">
 
 <img src="public/icon.svg" alt="A2B logo" width="96" height="96">
